@@ -1,0 +1,35 @@
+This takes a cumulative of the all the hours from beginning of 1 cycle to another.
+207 points (8.61*24=206.64)
+
+CYCLE	DAYS	HOURS	ROUNDED	RANGE
+1	4.01	96.24	96	96-3022	12.62	302.88	303	303-5093	21.23	509.52	510	510-7154	29.84	716.16	716	716-9225	38.45	922.8	923	923-11286	47.06	1129.44	1129	1129-13357	55.67	1336.08	1336	1336-15428	64.28	1542.72	1543	1543-17489	72.89	1749.36	1749	1749-1979
+
+
+A. 	BOutput_ATFSUM.m:: 
+			Matlab code to calculate PRCC for the parameters for the 11 Cell numbers (including sperm).
+			Takes a cumulative sum of the number across the cycles (9 cycles considered).
+			No NaN value involved in case of Cell numbers.
+			I/P::  /Users/debjit/Desktop/New/LHS_TEST/SET_i/Results_Stats/0.Output_2/*.txt' i=0:299
+	       			my.txt
+			O/P:: 	Z.Number_ATFSUM/X.PRCC_time.txt  [Stores the PRCC values]
+	      			Z.Number_ATFSUM/Y.signs_time.txt [Stores the p-values]
+
+
+B. 	BOutputDistance_ATFMEAN.m:: 
+			Matlab code to calculate PRCC for the parameters for the 10 Cell distances (no sperm).
+			Takes a cumulative mean of the number across the cycles (9 cycles considered).
+			NaN value involved in case of Cell distances. Uses a function 'nanmean' which ignores the NaN values.
+			I/P::  	/Users/debjit/Desktop/New/LHS_TEST/SET_i/Results_Stats/0.Output_2/*_Dist.txt' i=0:299
+	      			 my.txt
+			O/P:: 	Z.Distance_ATFMEAN/X.PRCC_time.txt  [Stores the PRCC values]
+	      			Z.Distance_ATFMEAN/Y.signs_time.txt [Stores the p-values]
+
+C.	4A.HISTOGRAM_NUMBER_ATFSUM.r:: Plots the PRCC(1.PRCC_CycleTime.pdf), p-values(1.SIGNS_CycleTime.pdf) and Significant heat map (2.Number_HIST_CycleTime.pdf, prick values for significant p-values)D	5.HISTOGRAM_DISTANCE_ATFMEAN.r:: Plots the PRCC(1.PRCC_CycleTime.pdf), p-values(1.SIGNS_CycleTime.pdf) and Significant heat map (2.Distance_HIST_CycleTime.pdf, prick values for significant p-values)E.	6.Combiner_NUMBER.r:: Plot to combine PRCC and P-values in one plot.F.	7.Combiner_DISTANCE.r:: Plot to combine PRCC and P-values in one plot.G.	8.HEATMAP_NUMBER_ATFSUM.r:: Final heatmap (used for Manuscript)H.	9.HEATMAP_DISTANCE_ATFMEAN.r:: Final heatmap (used for Manuscript)
+
+
+
+
+I.	PRCC_PLOT.m:: 	Code from the lhs_prcc folderJ.	PRCC1.m::	Code from the lhs_prcc folderK.	ranking1.m::	Code from the lhs_prcc folderL.	rankingN.m::	Code from the lhs_prcc folder
+
+M. 	Z.Number_ATFSUM/0.Scatter_Number: Number data for the scatter plots for Cycle1129
+N. 	Z.Distance_ATFMEAN/0.Scatter_Distance: Distance data for the scatter plots for Cycle1129

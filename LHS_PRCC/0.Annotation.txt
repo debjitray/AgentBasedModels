@@ -1,0 +1,36 @@
+RUNS=300
+The ranges are in hours and rounded up.
+0.5 - 1.5
+29 Parameters
+****************************************************************************************
+A. 1.parameters_LHS.txt: List of all parameters to be varied in the model
+
+B. MATLAB code to generate the LHS matrix. The parameter values were manually written in this code.
+	Code:: ALHS_All.m
+	O/P::  my.txt (29x300 matrix)
+The ALHS_ALL.m uses the function LHS_Call.
+Each parameter has a range from 0.5 to 1.5 of its original value.
+
+
+C. Perl code to generate the 300 (runs) parameter files. 
+It makes 48 changes in each file corresponding to the LHS matrix.
+Matches the parameter present in the my.txt in parameters_1.txt and replaces them with its PRCC values.
+300 files created for each of the 300 combinations.
+Each of these parameter files would be used for further running of the model.
+	Code:: C1_Parameter.pl
+	I/P::  parameters_1.txt
+	       my.txt
+	O/P::  TEST_Parameter/New_i.txt i=0:299
+
+
+*****************************************************************************************
+CYCLE	DAYS	HOURS	ROUNDED
+1	4.01	96.24	962	12.62	302.88	3033	21.23	509.52	5104	29.84	716.16	7165	38.45	922.8	9236	47.06	1129.44	11297	55.67	1336.08	13368	64.28	1542.72	15439	72.89	1749.36	1749
+
+The actual hours are n-1 (923 hours here means 922, as that data starts with a 0 Hour)
+
+D. Z.Analysis  (See Annotation inside the folder)
+	Main folder for the LHS results.
+	This takes a cumulative of the all the hours from beginning of 1 cycle mentioned above to another.
+	Cumulative sum is taken for the numbers.
+	Cumulative mean is taken for the distances.

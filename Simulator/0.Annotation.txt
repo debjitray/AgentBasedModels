@@ -1,0 +1,9 @@
+Modification on 
+		GermCellSimulator7_April17_2013_5_ROUND_PROB_SOLVED_PARAMETER_8_ALLCONF_NEW_ID_FINALE_GLOBAL
+
+This code can be used for : 	WILD TYPE
+				Inner Clock
+				BDAD
+Just change the parameters.
+
+Use this Germcellsimulator from now on.
